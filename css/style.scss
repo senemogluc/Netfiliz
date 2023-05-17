@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+}
+
+.nav-wrap {
+  width: 100%;
+}
+
+#logo {
+  width: 180px;
+  height: 80px;
+  float: left;
+}
+
+.menu-left {
+  float: left;
+  display: inline;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  ul {
+    list-style: none;
+  }
+
+  li {
+    float: left;
+    padding: 10px 20px;
+  }
+}
+
+.red {
+  color: red;
+}
+
+.menu-right {
+  float: right;
+  cursor: pointer;
+  color: white;
+}
+
+.main {
+  clear: both;
+  color: white;
+  height: 850px;
+  padding-top: 50px;
+}
+
+.main h1 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h6 {
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.topwrap {
+  text-align: center;
+}
+
+.mainposter {
+  height: 450px;
+  width: 100%;
+}
+
+.sideposter {
+  width: 70%;
+  height: auto;
+  margin-top: 60px;
+}
+
+#left {
+  cursor: pointer;
+  font-size: 4em;
+  margin-top: -300px;
+  float: left;
+}
+
+#right {
+  cursor: pointer;
+  font-size: 4em;
+  margin-top: -300px;
+}
+
+.contentsec {
+  height: 600px;
+  width: 100%;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.contentsec img {
+  height: 300px;
+  margin-top: 30px;
+}
+
+span button {
+  height: 50px;
+  width: 30%;
+  cursor: pointer;
+  color: #fff;
+  background: #1c2424;
+}
+
+button:hover {
+  color: #000;
+  background: grey;
+  cursor: pointer;
+}
+
+.browserHide {
+  background-color: #2f4f4f;
+  color: #fff;
+  float: left;
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+#topSearch {
+  display: none;
+}
+
+.contentsec img {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.contentsec img:hover {
+  transform: translateX(-25%);
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+  opacity: 0.8;
+}
