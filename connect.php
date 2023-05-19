@@ -6,5 +6,5 @@ define("DB_PASSWORD", "");
 define("DB_DATABASE", "netfiliz");
 
 $db = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE) or die ("Unable to connect");
-echo "Connected Successfully";
+#echo "Connected Successfully";
 ?>

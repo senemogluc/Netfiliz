@@ -33,6 +33,26 @@
     <div class="original">
         <h3 class="no-title">Recommended</h3>
         <div class="no">
+             
+            <?php
+                require_once 'connect.php';
+                $sql = "SELECT fName, movieName, redirectLink FROM movietable";
+                $result = mysqli_query($db,$sql);
+
+                while($row = mysqli_fetch_assoc($result)){
+                    $movie = $row['movieName'];
+                    $file = $row['fName'];
+                    $link = $row['redirectLink']
+                    ?>
+                    
+                    <?php echo "<a href='".$link."'>" ?>
+                        <?php echo "<img src ='".$file."' alt=''>" ?>
+                    <?php echo "</a>" ?>
+                    
+                <?php }
+                ?>
+                
+            <!--   
             <img src="assests/og1.jpg" alt="">
             <img src="assests/og7.jpg" alt="">
             <img src="assests/poster1.jpg" alt="">
@@ -45,6 +65,7 @@
             <img src="assests/poster10.jfif" alt="">
             <img src="assests/poster11.jfif" alt="">
             <img src="assests/poster12.jfif" alt="">
+             -->
         </div>
     </div>
 
