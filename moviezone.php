@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assests/nficon.ico">
+    <link rel="stylesheet" href="details-style.css">
     <link rel="stylesheet" href="moviezone.css">
     <title>Netfiliz</title>
 </head>
@@ -14,44 +14,28 @@
             <img src="assests/netflixlogo.png" alt="">
         </div>
     </section>
-    <!--
-    <div class="home-image">
-        <div class="home-image-text">
-            <img class="money" src="assests/monetharis.png" alt="">
-            <p>
-                Eight thieves take hostages and lock themselves in the Royal Mint of Spain as a criminal mastermind manipulates the police to carry out his plan.
-            </p>
-
-            <a style="text-decoration: none" href="assests/MoneyH.mp4">
-            <p class="play-button">Play
-                <img src="assests/play.png" alt="">
-            </p>
-            </a>
-        </div>
-    </div>
-    -->
+    
     <div class="original">
         <h3 class="no-title">Recommended</h3>
         <div class="no">
-             
+
             <?php
                 require_once 'connect.php';
-                $sql = "SELECT fName, movieName, redirectLink FROM movietable";
+                $sql = "SELECT fName, redirectLink FROM moviedetails";
                 $result = mysqli_query($db,$sql);
 
                 while($row = mysqli_fetch_assoc($result)){
-                    $movie = $row['movieName'];
                     $file = $row['fName'];
                     $link = $row['redirectLink']
                     ?>
                     
                     <?php echo "<a href='".$link."'>" ?>
-                        <?php echo "<img src ='".$file."' alt=''>" ?>
+                        <?php echo "<img src ='".$file."' alt='img'>" ?>
                     <?php echo "</a>" ?>
                     
                 <?php }
                 ?>
-                
+
             <!--   
             <img src="assests/og1.jpg" alt="">
             <img src="assests/og7.jpg" alt="">
