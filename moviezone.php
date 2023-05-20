@@ -12,6 +12,18 @@
     <section class="container">
         <div class="head">
             <img src="images/netflixlogo.png" alt="">
+            <div class="user-info">
+                <span>Welcome, 
+                    <?php 
+                    session_start();
+                    if (!isset($_SESSION['username'])) {
+                        header("Location: login.php");
+                    }
+                    echo $_SESSION['username']; 
+                    ?>
+                </span>
+                <a href="logout.php">Logout</a>
+            </div>
         </div>
     </section>
     
@@ -21,6 +33,7 @@
 
             <?php
                 require_once 'connect.php';
+                
                 $sql = "SELECT fName, redirectLink FROM moviedetails";
                 $result = mysqli_query($db,$sql);
 

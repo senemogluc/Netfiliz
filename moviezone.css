@@ -148,3 +148,10 @@ html{
     transition-delay: 0.1s;
     filter: brightness(70%);
 }
+.user-info {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

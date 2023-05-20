@@ -17,6 +17,7 @@
     <p>Don't have an account? <a href="register.php">Sign Up</a></p>
 
     <?php
+    session_start();
     // Check if the form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Retrieve the form data
@@ -52,6 +53,9 @@
             if (password_verify($password, $row["password"])) {
                 // Successful login
                 echo "Login successful. Welcome, " . $username . "!";
+                $_SESSION['valid'] = true;
+                $_SESSION['timeout'] = time();
+                $_SESSION["username"] = $username;
                 // Redirect to moviezone.php
                 header("Location: moviezone.php");
             } else {

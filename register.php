@@ -15,6 +15,7 @@
     </form>
 
     <?php
+    session_start();
     // Check if the form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Retrieve the form data
@@ -50,6 +51,9 @@
         if ($stmt->affected_rows === 1) {
             // Registration successful
             echo "Registration successful. Welcome, " . $username . "!";
+            $_SESSION['valid'] = true;
+            $_SESSION['timeout'] = time();
+            $_SESSION["username"] = $username;
             // Redirect to moviezone.php
             header("Location: moviezone.php");
         } else {
