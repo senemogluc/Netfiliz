@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="details-style.css">
-  <link rel="icon" href="assests/nficon.ico">
+  <link rel="icon" href="images/nficon.ico">
   <title>Movie Name</title>
   <body>
   <section class="movie-detail">
         <div class="container">
-
+          
         <?php
                 require_once 'connect.php';
                 $sql = "SELECT * FROM `moviedetails` WHERE `movieName` LIKE 'Stranger Things'";
