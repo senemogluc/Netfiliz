@@ -11,7 +11,7 @@
 <body>
     <section class="container">
         <div class="head">
-            <img src="assests/netflixlogo.png" alt="">
+            <img src="images/netflixlogo.png" alt="">
         </div>
     </section>
     
