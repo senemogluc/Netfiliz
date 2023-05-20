@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="details-style.css">
   <link rel="icon" href="images/nficon.ico">
-  <title>Movie Name</title>
+  <title>Netflix Clone Called Netfiliz!</title>
   <body>
   <section class="movie-detail">
         <div class="container">
@@ -42,8 +42,9 @@
             </h1>
             <div class="meta-wrapper">
               <div class="badge-wrapper">
-                <div class="badge badge-fill"><?php echo "$pg"?></div>
-
+                <div class="badge badge-fill">
+                <?php echo "$pg"?>
+                  </div>
                 <div class="badge badge-outline">HD</div>
               </div>
               <div class="ganre-wrapper">
@@ -76,11 +77,9 @@
               <button class="btn btn-primary">
               <ion-icon name="remove-circle-outline"></ion-icon>
                 <span>Remove</span>
-              </button>
               <button class="btn btn-primary">
               <ion-icon name="heart-dislike-outline"></ion-icon>
-                <span>Unrecommend</span>
-              </button>
+                <span>Unrecommend</span>   
             </div>
           </div>
         </div>
@@ -88,3 +87,4 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
+  </head>

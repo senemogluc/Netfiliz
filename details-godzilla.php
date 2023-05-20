@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="details-style.css">
   <link rel="icon" href="images/nficon.ico">
-  <title>Movie Name</title>
+  <title>Netflix Clone Called Netfiliz!</title>
   <body>
   <section class="movie-detail">
         <div class="container">
