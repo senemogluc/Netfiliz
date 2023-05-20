@@ -68,19 +68,48 @@
             </p>
             <?php }
               ?>
+             
+             <?php
+                if(isset($_POST['Add'])){
+                  $query = "INSERT INTO watchlist (movieName, fName) VALUES ('$name', '$file')";
+                  mysqli_query($db, $query);
+                  header("Location: moviezone.php");
+                }
+                elseif(isset($_POST['Remove'])){
+                  $query = "DELETE FROM watchlist WHERE `watchlist`.`movieName` = '$name'";
+                  mysqli_query($db, $query);
+                  header("Location: moviezone.php");
+                }
+                elseif(isset($_POST['Dislike'])){
+                  $query = "INSERT INTO watchlist (movieName, fName) VALUES ('$name', '$file')";
+                  mysqli_query($db, $query);
+                  header("Location: moviezone.php");
+                }
+              ?>
+
             <div class="details-actions">
+
               <button class="btn btn-primary">
-              <ion-icon name="add-circle-outline"></ion-icon>
-                <span>Add</span>
+                <ion-icon name="add-circle-outline"></ion-icon>
+                <form method="post">
+                  <input class="btn btn-primary" type="submit" name="Add" value='Add'>
+                </form>
               </button>
+              
               <button class="btn btn-primary">
-              <ion-icon name="remove-circle-outline"></ion-icon>
-                <span>Remove</span>
+                <ion-icon name="remove-circle-outline"></ion-icon>
+                <form method="post">
+                  <input class="btn btn-primary" type="submit" name="Remove" value='Remove'>
+                </form>
               </button>
+              
               <button class="btn btn-primary">
-              <ion-icon name="heart-dislike-outline"></ion-icon>
-                <span>Unrecommend</span>
+                <ion-icon name="heart-dislike-outline"></ion-icon>
+                <form method="post">
+                  <input class="btn btn-primary" type="submit" name="Dislike" value='Dislike'>
+                </form>
               </button>
+
             </div>
           </div>
         </div>
