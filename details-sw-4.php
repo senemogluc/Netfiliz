@@ -10,10 +10,10 @@
   <body>
   <section class="movie-detail">
         <div class="container">
-
+          
         <?php
                 require_once 'connect.php';
-                $sql = "SELECT * FROM `moviedetails` WHERE `movieName` LIKE 'Godzilla vs. Kong'";
+                $sql = "SELECT * FROM `moviedetails` WHERE `movieName` LIKE 'Star Wars: A New Hope'";
                 $result = mysqli_query($db,$sql);
 
                 while($row = mysqli_fetch_assoc($result)){
@@ -69,7 +69,7 @@
             </p>
             <?php }
               ?>
-              
+
               <?php
                 if(isset($_POST['Add'])){
                   $query = "INSERT INTO watchlist (movieName, fName, redirectLink) VALUES ('$name', '$file','$link')";
@@ -107,7 +107,7 @@
               <button class="btn btn-primary">
                 <ion-icon name="heart-dislike-outline"></ion-icon>
                 <form method="post">
-                <input class="btn btn-primary" type="submit" name="Dislike" value='Do not Recommend'>
+                  <input class="btn btn-primary" type="submit" name="Dislike" value='Do not Recommend'>
                 </form>
               </button>
 
