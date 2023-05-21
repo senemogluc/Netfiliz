@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style/authentication.css">
 </head>
 <body>
     <h2>Login</h2>

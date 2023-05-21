@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Registration Page</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style/authentication.css">
 </head>
 <body>
     <h2>Register</h2>
@@ -11,6 +11,12 @@
         <input type="text" id="username" name="username" required><br><br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
+        <label for="subscription">Subscription:</label>
+        <select id="subscription" name="subscription">
+            <option value="free">Free</option>
+            <option value="student">Student</option>
+            <option value="premium">Premium</option>
+        </select><br><br>
         <input type="submit" value="Register">
     </form>
 
@@ -21,6 +27,7 @@
         // Retrieve the form data
         $username = $_POST["username"];
         $password = $_POST["password"];
+        $subscription = $_POST["subscription"];
 
         // Database connection details
         $host = "localhost";
@@ -37,11 +44,11 @@
         }
 
         // Prepare and execute the query
-        $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO users (username, password, subscription) VALUES (?, ?, ?)");
         $hash = password_hash($password, PASSWORD_DEFAULT);
-        $stmt->bind_param("ss", $username, $hash);
+        $stmt->bind_param("sss", $username, $hash, $subscription);
         $stmt->execute();
-        
+
         // Check if the user exists
         $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
         $stmt->bind_param("s", $username);
