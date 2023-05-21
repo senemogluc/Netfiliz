@@ -12,7 +12,7 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
         <label for="subscription">Subscription:</label>
-        <select id="subscription" name="subscription">
+        <select id="subscription" name="subscription" required>
             <option value="free">Free</option>
             <option value="student">Student</option>
             <option value="premium">Premium</option>
@@ -61,8 +61,17 @@
             $_SESSION['valid'] = true;
             $_SESSION['timeout'] = time();
             $_SESSION["username"] = $username;
-            // Redirect to moviezone.php
-            header("Location: moviezone.php");
+
+            // Check if the selected subscription is a paid subscription
+            if ($subscription === "student" || $subscription === "premium") {
+                // Redirect to the payment page
+                header("Location: payment.php");
+                exit();
+            } else {
+                // Redirect to moviezone.php or any other page
+                header("Location: moviezone.php");
+                exit();
+            }
         } else {
             // Registration failed
             echo "Registration failed. Please try again.";
