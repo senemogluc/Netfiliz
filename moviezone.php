@@ -27,14 +27,36 @@
         </div>
     </section>
     
-    <div class="original">
+    <div class="original1">
         <h3 class="no-title">Recommended</h3>
         <div class="no">
 
             <?php
                 require_once 'connect.php';
                 
-                $sql = "SELECT fName, redirectLink FROM moviedetails";
+                $sql = "SELECT fName, redirectLink FROM recommended";
+                $result = mysqli_query($db,$sql);
+
+                while($row = mysqli_fetch_assoc($result)){
+                    $file = $row['fName'];
+                    $link = $row['redirectLink']
+                    ?>
+                    
+                    <?php echo "<a href='".$link."'>" ?>
+                        <?php echo "<img src ='".$file."' alt='img'>" ?>
+                    <?php echo "</a>" ?>
+                    
+                <?php }
+                ?>
+        </div>
+    </div>
+
+    <div class="original">
+        <h3 class="no-title">My Watch List</h3>
+        <div class="no">
+
+            <?php
+                $sql = "SELECT fName, redirectLink FROM watchlist";
                 $result = mysqli_query($db,$sql);
 
                 while($row = mysqli_fetch_assoc($result)){
@@ -49,38 +71,6 @@
                 <?php }
                 ?>
 
-            <!--   
-            <img src="assests/og1.jpg" alt="">
-            <img src="assests/og7.jpg" alt="">
-            <img src="assests/poster1.jpg" alt="">
-            <img src="assests/og4.jpg" alt="">
-            <img src="assests/og5.jpg" alt="">
-            <img src="assests/poster6.jpg" alt="">
-            <img src="assests/poster7.jfif" alt="">
-            <img src="assests/poster8.jfif" alt="">
-            <img src="assests/poster9.jfif" alt="">
-            <img src="assests/poster10.jfif" alt="">
-            <img src="assests/poster11.jfif" alt="">
-            <img src="assests/poster12.jfif" alt="">
-             -->
-        </div>
-    </div>
-
-    <div class="original">
-        <h3 class="no-title">Top Rated</h3>
-        <div class="no">
-            <img src="assests/ro1.jpg" alt="">
-            <img src="assests/poster14.jpg" alt="">
-            <img src="assests/ro8.jpg" alt="">
-            <img src="assests/poster18.jpg" alt="">
-            <img src="assests/poster19.jpg" alt="">
-            <img src="assests/poster22.jpeg" alt="">
-            <img src="assests/poster18.jpg" alt="">
-            <img src="assests/poster8.jfif" alt="">
-            <img src="assests/poster9.jfif" alt="">
-            <img src="assests/poster10.jfif" alt="">
-            <img src="assests/poster11.jfif" alt="">
-            <img src="assests/poster12.jfif" alt="">
         </div>
     </div>
 

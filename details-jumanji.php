@@ -25,6 +25,7 @@
                   $duration = $row['duration'];
                   $story = $row['storyLine'];
                   $file = $row['fName'];
+                  $link = $row['redirectLink'];
                   ?>
               
 
@@ -68,11 +69,10 @@
             </p>
             <?php }
               ?>
-
-            
+    
               <?php
                 if(isset($_POST['Add'])){
-                  $query = "INSERT INTO watchlist (movieName, fName) VALUES ('$name', '$file')";
+                  $query = "INSERT INTO watchlist (movieName, fName, redirectLink) VALUES ('$name', '$file','$link')";
                   mysqli_query($db, $query);
                   header("Location: moviezone.php");
                 }
@@ -82,7 +82,7 @@
                   header("Location: moviezone.php");
                 }
                 elseif(isset($_POST['Dislike'])){
-                  $query = "INSERT INTO watchlist (movieName, fName) VALUES ('$name', '$file')";
+                  $query = "DELETE FROM recommended WHERE `recommended`.`movieName` = '$name'";
                   mysqli_query($db, $query);
                   header("Location: moviezone.php");
                 }

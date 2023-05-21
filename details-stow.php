@@ -25,6 +25,7 @@
                   $duration = $row['duration'];
                   $story = $row['storyLine'];
                   $file = $row['fName'];
+                  $link = $row['redirectLink'];
                   ?>
               
 
@@ -71,7 +72,7 @@
               
               <?php
                 if(isset($_POST['Add'])){
-                  $query = "INSERT INTO watchlist (movieName, fName) VALUES ('$name', '$file')";
+                  $query = "INSERT INTO watchlist (movieName, fName, redirectLink) VALUES ('$name', '$file','$link')";
                   mysqli_query($db, $query);
                   header("Location: moviezone.php");
                 }
@@ -81,7 +82,7 @@
                   header("Location: moviezone.php");
                 }
                 elseif(isset($_POST['Dislike'])){
-                  $query = "INSERT INTO watchlist (movieName, fName) VALUES ('$name', '$file')";
+                  $query = "DELETE FROM recommended WHERE `recommended`.`movieName` = '$name'";
                   mysqli_query($db, $query);
                   header("Location: moviezone.php");
                 }
@@ -106,7 +107,7 @@
               <button class="btn btn-primary">
                 <ion-icon name="heart-dislike-outline"></ion-icon>
                 <form method="post">
-                  <input class="btn btn-primary" type="submit" name="Dislike" value='Dislike'>
+                <input class="btn btn-primary" type="submit" name="Dislike" value='Do not Recommend'>
                 </form>
               </button>
 
