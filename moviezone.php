@@ -19,6 +19,7 @@
                     if (!isset($_SESSION['username'])) {
                         header("Location: login.php");
                     }
+                    $userName = $_SESSION['username'];
                     echo $_SESSION['username']; 
                     ?>
                 </span>
@@ -34,19 +35,43 @@
             <?php
                 require_once 'connect.php';
                 
-                $sql = "SELECT fName, redirectLink FROM recommended";
-                $result = mysqli_query($db,$sql);
+                $age = "SELECT age_verification FROM users WHERE username = '$userName'";
+                $ageResult = mysqli_query($db,$age);
 
-                while($row = mysqli_fetch_assoc($result)){
-                    $file = $row['fName'];
-                    $link = $row['redirectLink']
-                    ?>
+                while($row = mysqli_fetch_assoc($ageResult)){
+                    $age = $row['age_verification'];
+                    if ($age == 0){
+                        $sql13 = "SELECT fName, redirectLink FROM recommended WHERE pg = 'PG 13'";
+                        $result13 = mysqli_query($db,$sql13);
+
+                        while($row = mysqli_fetch_assoc($result13)){
+                            $file = $row['fName'];
+                            $link = $row['redirectLink']
+                            ?>
+                            
+                            <?php echo "<a href='".$link."'>" ?>
+                                <?php echo "<img src ='".$file."' alt='img'>" ?>
+                            <?php echo "</a>" ?>
+                            
+
+                        <?php } 
+                    }
+                    elseif($age == 1){
+                        $sql = "SELECT fName, redirectLink FROM recommended";
+                        $result = mysqli_query($db,$sql);
+
+                        while($row = mysqli_fetch_assoc($result)){
+                            $file = $row['fName'];
+                            $link = $row['redirectLink']
+                            ?>
                     
-                    <?php echo "<a href='".$link."'>" ?>
-                        <?php echo "<img src ='".$file."' alt='img'>" ?>
-                    <?php echo "</a>" ?>
-                    
-                <?php }
+                            <?php echo "<a href='".$link."'>" ?>
+                                <?php echo "<img src ='".$file."' alt='img'>" ?>
+                            <?php echo "</a>" ?> 
+
+                    <?php }
+                    }
+                }
                 ?>
         </div>
     </div>
