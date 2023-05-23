@@ -100,75 +100,88 @@
     </div>
 
     <div class="original1">
-        <h3 class="no-title">Comedy Movies</h3>
-        <div class="no">
-            <img src="assests/co1.jpg" alt="">
-            <img src="assests/co2.jpg" alt="">
-            <img src="assests/co3.png" alt="">
-            <img src="assests/co4.jpg" alt="">
-            <img src="assests/co5.jpg" alt="">
-            <img src="assests/co6.jpg" alt="">
-            <img src="assests/co7.jpg" alt="">
-            <img src="assests/co8.jpg" alt="">
-            <img src="assests/poster1.jpg" alt="">
-            <img src="assests/ro4.jpg" alt="">
-            <img src="assests/poster22.jpeg" alt="">
-            <img src="assests/poster18.jpg" alt="">
-            <img src="assests/poster5.jfif" alt="">
-            <img src="assests/poster6.jpg" alt="">
-            <img src="assests/poster7.jfif" alt="">
-            <img src="assests/poster1.jpg" alt="">
-            <img src="assests/poster3.jfif" alt="">
-            <img src="assests/poster10.jfif" alt="">
-        </div>
-    </div>
-
-    <div class="original1">
-        <h3 class="no-title">Romantic Movies</h3>
-        <div class="no">
-            <img src="assests/ro1.jpg" alt="">
-            <img src="assests/ro2.jpg" alt="">
-            <img src="assests/ro3.jpg" alt="">
-            <img src="assests/ro4.jpg" alt="">
-            <img src="assests/ro6.jpg" alt="">
-            <img src="assests/ro7.jpg" alt="">
-            <img src="assests/ro8.jpg" alt="">
-            <img src="assests/poster1.jpg" alt="">
-            <img src="assests/poster22.jpeg" alt="">
-            <img src="assests/co7.jpg" alt="">
-            <img src="assests/co4.jpg" alt="">
-            <img src="assests/co3.png" alt="">
-            <img src="assests/poster7.jfif" alt="">
-            <img src="assests/co8.jpg" alt="">
-            <img src="assests/poster7.jfif" alt="">
-            <img src="assests/poster1.jpg" alt="">
-            <img src="assests/poster3.jfif" alt="">
-            <img src="assests/poster10.jfif" alt="">
-        </div>
-    </div>
-    <div class="original1">
         <h3 class="no-title">Action Movies</h3>
         <div class="no">
-            <img src="assests/poster13.jpg" alt="">
-            <img src="assests/poster14.jpg" alt="">
-            <img src="assests/poster19.jpg" alt="">
-            <img src="assests/poster16.jpg" alt="">
-            <img src="assests/poster17.jpg" alt="">
-            <img src="assests/poster18.jpg" alt="">
-            <img src="assests/poster20.jpg" alt="">
-            <img src="assests/poster12.jfif" alt="">
-            <img src="assests/poster22.jpeg" alt="">
-            <img src="assests/poster10.jfif" alt="">
-            <img src="assests/poster11.jfif" alt="">
-            <img src="assests/poster12.jfif" alt="">
-            <img src="assests/poster5.jfif" alt="">
-            <img src="assests/poster6.jpg" alt="">
-            <img src="assests/poster7.jfif" alt="">
-            <img src="assests/poster1.jpg" alt="">
-            <img src="assests/poster19.jpg" alt="">
-            <img src="assests/poster10.jfif" alt="">
+            <?php
+            $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Action' OR `ganre2` = 'Action'";
+            $result = mysqli_query($db,$sql);
+            
+            while($row = mysqli_fetch_assoc($result)){
+                $file = $row['fName'];
+                $link = $row['redirectLink']
+                ?>
+                <?php echo "<img src='".$file."' alt=''>" ?>
+            <?php }
+            ?>
         </div>
     </div>
 
+    <div class="original1">
+        <h3 class="no-title">Sci-Fi Movies</h3>
+        <div class="no">
+            <?php
+            $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Sci-Fi' OR `ganre2` = 'Sci-Fi'";
+            $result = mysqli_query($db,$sql);
+            
+            while($row = mysqli_fetch_assoc($result)){
+                $file = $row['fName'];
+                $link = $row['redirectLink']
+                ?>
+                <?php echo "<img src='".$file."' alt=''>" ?>
+            <?php }
+            ?>
+        </div>
+    </div>
+
+    <div class="original1">
+        <h3 class="no-title">Comedy Movies</h3>
+        <div class="no">
+            <?php
+            $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Comedy' OR `ganre2` = 'Comedy'";
+            $result = mysqli_query($db,$sql);
+            
+            while($row = mysqli_fetch_assoc($result)){
+                $file = $row['fName'];
+                $link = $row['redirectLink']
+                ?>
+                <?php echo "<img src='".$file."' alt=''>" ?>
+            <?php }
+            ?>
+        </div>
+    </div>
+
+    <div class="original1">
+        <h3 class="no-title">Adventure Movies</h3>
+        <div class="no">
+            <?php
+            $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Adventure' OR `ganre2` = 'Adventure'";
+            $result = mysqli_query($db,$sql);
+            
+            while($row = mysqli_fetch_assoc($result)){
+                $file = $row['fName'];
+                $link = $row['redirectLink']
+                ?>
+                <?php echo "<img src='".$file."' alt=''>" ?>
+            <?php }
+            ?>
+        </div>
+    </div>
+
+    <div class="original1">
+        <h3 class="no-title">Horror Movies</h3>
+        <div class="no">
+            <?php
+            $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Horror' OR `ganre2` = 'Horror'";
+            $result = mysqli_query($db,$sql);
+            
+            while($row = mysqli_fetch_assoc($result)){
+                $file = $row['fName'];
+                $link = $row['redirectLink']
+                ?>
+                <?php echo "<img src='".$file."' alt=''>" ?>
+            <?php }
+            ?>
+        </div>
+    </div>
 </body>
 </html>
