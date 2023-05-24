@@ -103,17 +103,44 @@
         <h3 class="no-title">Action Movies</h3>
         <div class="no">
             <?php
-            $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Action' OR `ganre2` = 'Action'";
-            $result = mysqli_query($db,$sql);
+
+            $age = "SELECT age_verification FROM users WHERE username = '$userName'";
+            $ageResult = mysqli_query($db,$age);
+
+            while($row = mysqli_fetch_assoc($ageResult)){
+                $age = $row['age_verification'];
+                if($age == 0){
+                    $sql13 = "SELECT fName, redirectLink FROM `moviedetails` WHERE `pg` = 'PG 13' AND (`ganre1` = 'Action' OR `ganre2` = 'Action')";
+                    $result13 = mysqli_query($db,$sql13);
+
+                    while($row = mysqli_fetch_assoc($result13)){
+                        $file = $row['fName'];
+                        $link = $row['redirectLink']
+                        ?>
+                        
+                        <?php echo "<a href='".$link."'>" ?>
+                            <?php echo "<img src ='".$file."' alt='img'>" ?>
+                        <?php echo "</a>" ?>
+                        
+
+                    <?php } 
+                }
+                elseif($age == 1){
+                    $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Action' OR `ganre2` = 'Action'";
+                    $result = mysqli_query($db,$sql);
             
-            while($row = mysqli_fetch_assoc($result)){
-                $file = $row['fName'];
-                $link = $row['redirectLink']
-                ?>
-                <?php echo "<a href='".$link."'>" ?>
-                    <?php echo "<img src ='".$file."' alt=''>" ?>
-                <?php echo "</a>" ?>
-            <?php }
+                    while($row = mysqli_fetch_assoc($result)){
+                        $file = $row['fName'];
+                        $link = $row['redirectLink']
+                        ?>
+                        <?php echo "<a href='".$link."'>" ?>
+                            <?php echo "<img src ='".$file."' alt=''>" ?>
+                        <?php echo "</a>" ?>
+
+                <?php }
+                }
+
+            }
             ?>
         </div>
     </div>
@@ -121,18 +148,45 @@
     <div class="original1">
         <h3 class="no-title">Sci-Fi Movies</h3>
         <div class="no">
-            <?php
-            $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Sci-Fi' OR `ganre2` = 'Sci-Fi'";
-            $result = mysqli_query($db,$sql);
-            
-            while($row = mysqli_fetch_assoc($result)){
-                $file = $row['fName'];
-                $link = $row['redirectLink']
-                ?>
-                <?php echo "<a href='".$link."'>" ?>
-                    <?php echo "<img src ='".$file."' alt=''>" ?>
-                <?php echo "</a>" ?>
-            <?php }
+        <?php
+
+            $age = "SELECT age_verification FROM users WHERE username = '$userName'";
+            $ageResult = mysqli_query($db,$age);
+
+            while($row = mysqli_fetch_assoc($ageResult)){
+                $age = $row['age_verification'];
+                if($age == 0){
+                    $sql13 = "SELECT fName, redirectLink FROM `moviedetails` WHERE `pg` = 'PG 13' AND (`ganre1` = 'Sci-Fi' OR `ganre2` = 'Sci-Fi')";
+                    $result13 = mysqli_query($db,$sql13);
+
+                    while($row = mysqli_fetch_assoc($result13)){
+                        $file = $row['fName'];
+                        $link = $row['redirectLink']
+                        ?>
+                        
+                        <?php echo "<a href='".$link."'>" ?>
+                            <?php echo "<img src ='".$file."' alt='img'>" ?>
+                        <?php echo "</a>" ?>
+                        
+
+                    <?php } 
+                }
+                elseif($age == 1){
+                    $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Sci-Fi' OR `ganre2` = 'Sci-Fi'";
+                    $result = mysqli_query($db,$sql);
+
+                    while($row = mysqli_fetch_assoc($result)){
+                        $file = $row['fName'];
+                        $link = $row['redirectLink']
+                        ?>
+                        <?php echo "<a href='".$link."'>" ?>
+                            <?php echo "<img src ='".$file."' alt=''>" ?>
+                        <?php echo "</a>" ?>
+
+                <?php }
+                }
+
+            }
             ?>
         </div>
     </div>
@@ -140,18 +194,45 @@
     <div class="original1">
         <h3 class="no-title">Comedy Movies</h3>
         <div class="no">
-            <?php
-            $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Comedy' OR `ganre2` = 'Comedy'";
-            $result = mysqli_query($db,$sql);
-            
-            while($row = mysqli_fetch_assoc($result)){
-                $file = $row['fName'];
-                $link = $row['redirectLink']
-                ?>
-                <?php echo "<a href='".$link."'>" ?>
-                    <?php echo "<img src ='".$file."' alt=''>" ?>
-                <?php echo "</a>" ?>
-            <?php }
+        <?php
+
+            $age = "SELECT age_verification FROM users WHERE username = '$userName'";
+            $ageResult = mysqli_query($db,$age);
+
+            while($row = mysqli_fetch_assoc($ageResult)){
+                $age = $row['age_verification'];
+                if($age == 0){
+                    $sql13 = "SELECT fName, redirectLink FROM `moviedetails` WHERE `pg` = 'PG 13' AND (`ganre1` = 'Comedy' OR `ganre2` = 'Comedy')";
+                    $result13 = mysqli_query($db,$sql13);
+
+                    while($row = mysqli_fetch_assoc($result13)){
+                        $file = $row['fName'];
+                        $link = $row['redirectLink']
+                        ?>
+                        
+                        <?php echo "<a href='".$link."'>" ?>
+                            <?php echo "<img src ='".$file."' alt='img'>" ?>
+                        <?php echo "</a>" ?>
+                        
+
+                    <?php } 
+                }
+                elseif($age == 1){
+                    $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Comedy' OR `ganre2` = 'Comedy'";
+                    $result = mysqli_query($db,$sql);
+
+                    while($row = mysqli_fetch_assoc($result)){
+                        $file = $row['fName'];
+                        $link = $row['redirectLink']
+                        ?>
+                        <?php echo "<a href='".$link."'>" ?>
+                            <?php echo "<img src ='".$file."' alt=''>" ?>
+                        <?php echo "</a>" ?>
+
+                <?php }
+                }
+
+            }
             ?>
         </div>
     </div>
@@ -159,18 +240,45 @@
     <div class="original1">
         <h3 class="no-title">Adventure Movies</h3>
         <div class="no">
-            <?php
-            $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Adventure' OR `ganre2` = 'Adventure'";
-            $result = mysqli_query($db,$sql);
-            
-            while($row = mysqli_fetch_assoc($result)){
-                $file = $row['fName'];
-                $link = $row['redirectLink']
-                ?>
-                <?php echo "<a href='".$link."'>" ?>
-                    <?php echo "<img src ='".$file."' alt=''>" ?>
-                <?php echo "</a>" ?>
-            <?php }
+        <?php
+
+            $age = "SELECT age_verification FROM users WHERE username = '$userName'";
+            $ageResult = mysqli_query($db,$age);
+
+            while($row = mysqli_fetch_assoc($ageResult)){
+                $age = $row['age_verification'];
+                if($age == 0){
+                    $sql13 = "SELECT fName, redirectLink FROM `moviedetails` WHERE `pg` = 'PG 13' AND (`ganre1` = 'Adventure' OR `ganre2` = 'Adventure')";
+                    $result13 = mysqli_query($db,$sql13);
+
+                    while($row = mysqli_fetch_assoc($result13)){
+                        $file = $row['fName'];
+                        $link = $row['redirectLink']
+                        ?>
+                        
+                        <?php echo "<a href='".$link."'>" ?>
+                            <?php echo "<img src ='".$file."' alt='img'>" ?>
+                        <?php echo "</a>" ?>
+                        
+
+                    <?php } 
+                }
+                elseif($age == 1){
+                    $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Adventure' OR `ganre2` = 'Adventure'";
+                    $result = mysqli_query($db,$sql);
+
+                    while($row = mysqli_fetch_assoc($result)){
+                        $file = $row['fName'];
+                        $link = $row['redirectLink']
+                        ?>
+                        <?php echo "<a href='".$link."'>" ?>
+                            <?php echo "<img src ='".$file."' alt=''>" ?>
+                        <?php echo "</a>" ?>
+
+                <?php }
+                }
+
+            }
             ?>
         </div>
     </div>
@@ -178,18 +286,45 @@
     <div class="original1">
         <h3 class="no-title">Horror Movies</h3>
         <div class="no">
-            <?php
-            $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Horror' OR `ganre2` = 'Horror'";
-            $result = mysqli_query($db,$sql);
-            
-            while($row = mysqli_fetch_assoc($result)){
-                $file = $row['fName'];
-                $link = $row['redirectLink']
-                ?>
-                <?php echo "<a href='".$link."'>" ?>
-                    <?php echo "<img src ='".$file."' alt=''>" ?>
-                <?php echo "</a>" ?>
-            <?php }
+        <?php
+
+            $age = "SELECT age_verification FROM users WHERE username = '$userName'";
+            $ageResult = mysqli_query($db,$age);
+
+            while($row = mysqli_fetch_assoc($ageResult)){
+                $age = $row['age_verification'];
+                if($age == 0){
+                    $sql13 = "SELECT fName, redirectLink FROM `moviedetails` WHERE `pg` = 'PG 13' AND (`ganre1` = 'Horror' OR `ganre2` = 'Horror')";
+                    $result13 = mysqli_query($db,$sql13);
+
+                    while($row = mysqli_fetch_assoc($result13)){
+                        $file = $row['fName'];
+                        $link = $row['redirectLink']
+                        ?>
+                        
+                        <?php echo "<a href='".$link."'>" ?>
+                            <?php echo "<img src ='".$file."' alt='img'>" ?>
+                        <?php echo "</a>" ?>
+                        
+
+                    <?php } 
+                }
+                elseif($age == 1){
+                    $sql = "SELECT fName, redirectLink FROM `moviedetails` WHERE `ganre1` = 'Horror' OR `ganre2` = 'Horror'";
+                    $result = mysqli_query($db,$sql);
+
+                    while($row = mysqli_fetch_assoc($result)){
+                        $file = $row['fName'];
+                        $link = $row['redirectLink']
+                        ?>
+                        <?php echo "<a href='".$link."'>" ?>
+                            <?php echo "<img src ='".$file."' alt=''>" ?>
+                        <?php echo "</a>" ?>
+
+                <?php }
+                }
+
+            }
             ?>
         </div>
     </div>
