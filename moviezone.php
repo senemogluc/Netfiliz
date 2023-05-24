@@ -110,7 +110,9 @@
                 $file = $row['fName'];
                 $link = $row['redirectLink']
                 ?>
-                <?php echo "<img src='".$file."' alt=''>" ?>
+                <?php echo "<a href='".$link."'>" ?>
+                    <?php echo "<img src ='".$file."' alt=''>" ?>
+                <?php echo "</a>" ?>
             <?php }
             ?>
         </div>
@@ -127,7 +129,9 @@
                 $file = $row['fName'];
                 $link = $row['redirectLink']
                 ?>
-                <?php echo "<img src='".$file."' alt=''>" ?>
+                <?php echo "<a href='".$link."'>" ?>
+                    <?php echo "<img src ='".$file."' alt=''>" ?>
+                <?php echo "</a>" ?>
             <?php }
             ?>
         </div>
@@ -144,7 +148,9 @@
                 $file = $row['fName'];
                 $link = $row['redirectLink']
                 ?>
-                <?php echo "<img src='".$file."' alt=''>" ?>
+                <?php echo "<a href='".$link."'>" ?>
+                    <?php echo "<img src ='".$file."' alt=''>" ?>
+                <?php echo "</a>" ?>
             <?php }
             ?>
         </div>
@@ -161,7 +167,9 @@
                 $file = $row['fName'];
                 $link = $row['redirectLink']
                 ?>
-                <?php echo "<img src='".$file."' alt=''>" ?>
+                <?php echo "<a href='".$link."'>" ?>
+                    <?php echo "<img src ='".$file."' alt=''>" ?>
+                <?php echo "</a>" ?>
             <?php }
             ?>
         </div>
@@ -178,7 +186,9 @@
                 $file = $row['fName'];
                 $link = $row['redirectLink']
                 ?>
-                <?php echo "<img src='".$file."' alt=''>" ?>
+                <?php echo "<a href='".$link."'>" ?>
+                    <?php echo "<img src ='".$file."' alt=''>" ?>
+                <?php echo "</a>" ?>
             <?php }
             ?>
         </div>
