@@ -33,7 +33,7 @@
                 <a href="../logout.php">Logout</a>
             </div>
             <div>
-            <button class="btn btn-primary">
+            <button class="translate-button">
                 <ion-icon name="heart-dislike-outline"></ion-icon>
                 <form method="post">
                 <input class="btn btn-primary" type="submit" name="TR" value='Turkish'>

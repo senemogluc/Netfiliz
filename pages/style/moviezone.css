@@ -58,6 +58,14 @@ body{
     width: 25px;
     position: absolute;
 }
+.translate-button{
+    background-color: red;
+    color: black;
+    border-radius: 4px;
+    width: 70px;
+    padding: 5px 20px 0px;
+    font-size: 25px;
+}
 /* netflix original and top rated */
 .original{
     color: aliceblue;
