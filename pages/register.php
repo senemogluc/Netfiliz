@@ -82,7 +82,7 @@
                     exit();
                 } else {
                     // Redirect to moviezone.php or any other page
-                    header("Location: moviezone.php");
+                    header("Location: en/moviezone.php");
                     exit();
                 }
             } else {

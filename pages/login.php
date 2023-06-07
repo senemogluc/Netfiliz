@@ -57,7 +57,7 @@
                 $_SESSION['timeout'] = time();
                 $_SESSION["username"] = $username;
                 // Redirect to moviezone.php
-                header("Location: moviezone.php");
+                header("Location: en/moviezone.php");
             } else {
                 // Invalid password
                 echo "Invalid password.";

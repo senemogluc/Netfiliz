@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/moviezone.css">
-    <link rel="icon" href="../../images/nficon.ico">
+    <link rel="icon" href=".../../images/nficon.ico">
     <title>Netflix Clone Called Netfiliz!</title>
 </head>
 <body>
@@ -17,14 +17,29 @@
                     <?php 
                     session_start();
                     if (!isset($_SESSION['username'])) {
-                        header("Location: login.php");
+                        header("Location: ../login.php");
                     }
                     $userName = $_SESSION['username'];
                     echo $_SESSION['username']; 
+
+                    if(isset($_POST['TR'])){
+                        header("Location: ../tr/moviezone.php");
+                      }
+                    elseif(isset($_POST['EN'])){
+                        header("Location: ../en/moviezone.php");
+                      }
                     ?>
                 </span>
-                <a href="logout.php">Logout</a>
+                <a href="../logout.php">Logout</a>
             </div>
+            <div>
+            <button class="btn btn-primary">
+                <ion-icon name="heart-dislike-outline"></ion-icon>
+                <form method="post">
+                <input class="btn btn-primary" type="submit" name="TR" value='Turkish'>
+                </form>
+              </button>
+            </div>        
         </div>
     </section>
     
