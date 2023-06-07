@@ -48,8 +48,8 @@
                 <div class="badge badge-outline">HD</div>
               </div>
               <div class="ganre-wrapper">
-                <a href="#"><?php echo "$ganre1"?></a>
-                <a href="#"><?php echo "$ganre2"?></a>
+                <a href="#"><?php echo "Bilim Kurgu"?></a>
+                <a href="#"><?php echo "Aksiyon"?></a>
               </div>
               <div class="date-time">
                 <div>
@@ -65,7 +65,7 @@
               </div>
             </div>
             <p class="storyline">
-            <?php echo "$story"?>
+            <?php echo "The Mandalorian, Star Wars serisinin VI ve VII filmleri arasındaki 30 yılda yaşananları konu ediyor. Yalnız bir silahşör ve ödül avcısı olan Mandalorian, dünyanın dört bir yanında çalışır. Bir gün ona Greef Karga tarafından yeni bir iş verilir. Ondan istenen şey, bir paketi alıp onlara getirmesidir. Mandalorian, bu sırada getirmesini istedikleri paketin aslında küçük bir çocuğa benzeyen bir varlık olduğunu fark eder. Teslimatı gerçekleştirdiği zaman çocuğun öldürüleceğini anlayan Mandalorian, çocuğu teslim etmez ve kendisini bir kovalamacanın içinde bulur."?>
             </p>
             <?php }
               ?>

@@ -39,7 +39,7 @@
           </figure>
           <div class="movie-detail-content">
             <h1 class="h1 detail-title">
-              <?php echo "$name" ?>
+              <?php echo "Ucuz Roman" ?>
             </h1>
             <div class="meta-wrapper">
               <div class="badge-wrapper">
@@ -48,8 +48,8 @@
                 <div class="badge badge-outline">HD</div>
               </div>
               <div class="ganre-wrapper">
-                <a href="#"><?php echo "$ganre1"?></a>
-                <a href="#"><?php echo "$ganre2"?></a>
+                <a href="#"><?php echo "Aksiyon"?></a>
+                <a href="#"><?php echo "Macera"?></a>
               </div>
               <div class="date-time">
                 <div>
@@ -65,7 +65,7 @@
               </div>
             </div>
             <p class="storyline">
-            <?php echo "$story"?>
+            <?php echo "Ucuz Roman'da Honey Bunny ve Pumpkin, hayatlarına biraz hareket katmak isteyen genç ve birbirine aşık bir çift küçük soyguncudur. Öteyandan, iki kaşarlanmış gangster, Vincent Vega ve Jules, günlük işlerinden biri olarak, patronlarına ödemeyi geciktiren bir kaç sahetekar genci vurmaya giderler. Vincent patronun güzel ve genç karısına bebek bakıcılığı yapmakla da görevlendirilirken ortağı suç yaşamına son vermeye karar verir. Cesur bir boksör ise para karşılığı hile yapmayı reddederek şehirden kaçar. Kader bu aykırı tipleri muhteşem bir şekilde bir araya getirecek, yollarını kesiştirecektir."?>
             </p>
             <?php }
               ?>
