@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/moviezone.css">
-    <link rel="icon" href=".../../images/nficon.ico">
+    <link rel="icon" href="../images/nico.png">
     <title>Netflix Clone Called Netfiliz!</title>
 </head>
 <body>
     <section class="container">
         <div class="head">
-            <img src="../images/netflixlogo.png" alt="">
+            <br>
+            <img src="../images/netfilizlogo.png" alt="">
             <div class="user-info">
-                <span>Welcome, 
+                <span>Hoşgeldin, 
                     <?php 
                     session_start();
                     if (!isset($_SESSION['username'])) {
@@ -30,21 +31,22 @@
                       }
                     ?>
                 </span>
-                <a href="../logout.php">Logout</a>
+                <a href="../logout.php">Oturumu Kapat</a>
             </div>
             <div>
-            <button class="btn btn-primary">
-                <ion-icon name="heart-dislike-outline"></ion-icon>
+
+            <button class="translate-button">
                 <form method="post">
                 <input class="btn btn-primary" type="submit" name="EN" value='English'>
                 </form>
               </button>
-            </div>        
+            </div>  
+            <br>      
         </div>
     </section>
     
     <div class="original1">
-        <h3 class="no-title">Recommended</h3>
+        <h3 class="no-title">Önerilen</h3>
         <div class="no">
 
             <?php
@@ -92,7 +94,7 @@
     </div>
 
     <div class="original">
-        <h3 class="no-title">My Watch List</h3>
+        <h3 class="no-title">İzleme Listem</h3>
         <div class="no">
 
             <?php
@@ -115,7 +117,7 @@
     </div>
 
     <div class="original1">
-        <h3 class="no-title">Action Movies</h3>
+        <h3 class="no-title">Aksiyon Filmleri</h3>
         <div class="no">
             <?php
 
@@ -161,7 +163,7 @@
     </div>
 
     <div class="original1">
-        <h3 class="no-title">Sci-Fi Movies</h3>
+        <h3 class="no-title">Bilim Kurgu Filmleri</h3>
         <div class="no">
         <?php
 
@@ -207,7 +209,7 @@
     </div>
 
     <div class="original1">
-        <h3 class="no-title">Comedy Movies</h3>
+        <h3 class="no-title">Komedi Filmleri</h3>
         <div class="no">
         <?php
 
@@ -253,7 +255,7 @@
     </div>
 
     <div class="original1">
-        <h3 class="no-title">Adventure Movies</h3>
+        <h3 class="no-title">Macera Filmleri</h3>
         <div class="no">
         <?php
 
@@ -299,7 +301,7 @@
     </div>
 
     <div class="original1">
-        <h3 class="no-title">Horror Movies</h3>
+        <h3 class="no-title">Korku Filmleri</h3>
         <div class="no">
         <?php
 

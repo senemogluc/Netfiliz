@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/moviezone.css">
-    <link rel="icon" href=".../../images/nficon.ico">
+    <link rel="icon" href="../images/nico.png">
     <title>Netflix Clone Called Netfiliz!</title>
 </head>
 <body>
     <section class="container">
         <div class="head">
-            <img src="../images/netflixlogo.png" alt="">
+            <br>
+            <img src="../images/netfilizlogo.png" alt="">
             <div class="user-info">
                 <span>Welcome, 
                     <?php 
@@ -34,12 +35,12 @@
             </div>
             <div>
             <button class="translate-button">
-                <ion-icon name="heart-dislike-outline"></ion-icon>
                 <form method="post">
                 <input class="btn btn-primary" type="submit" name="TR" value='Turkish'>
                 </form>
               </button>
-            </div>        
+            </div> 
+            <br>         
         </div>
     </section>
     
