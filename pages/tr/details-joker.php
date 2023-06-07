@@ -65,7 +65,7 @@
               </div>
             </div>
             <p class="storyline">
-            <?php echo "$story"?>
+            <?php echo "Gelecek vadeden stand-up komedyeni ve paryadan Gotham'ın soytarı prensi ve devrimin lideri olan Arthur Fleck'in yükselişi."?>
             </p>
             <?php }
               ?>
@@ -93,21 +93,21 @@
               <button class="btn btn-primary">
                 <ion-icon name="add-circle-outline"></ion-icon>
                 <form method="post">
-                  <input class="btn btn-primary" type="submit" name="Add" value='Add'>
+                  <input class="btn btn-primary" type="submit" name="Add" value='Ekle'>
                 </form>
               </button>
               
               <button class="btn btn-primary">
                 <ion-icon name="remove-circle-outline"></ion-icon>
                 <form method="post">
-                  <input class="btn btn-primary" type="submit" name="Remove" value='Remove'>
+                  <input class="btn btn-primary" type="submit" name="Remove" value='Kaldır'>
                 </form>
               </button>
               
               <button class="btn btn-primary">
                 <ion-icon name="heart-dislike-outline"></ion-icon>
                 <form method="post">
-                <input class="btn btn-primary" type="submit" name="Dislike" value='Do not Recommend'>
+                <input class="btn btn-primary" type="submit" name="Dislike" value='Önerme'>
                 </form>
               </button>
 

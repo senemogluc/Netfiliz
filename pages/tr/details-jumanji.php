@@ -48,8 +48,8 @@
                 <div class="badge badge-outline">HD</div>
               </div>
               <div class="ganre-wrapper">
-                <a href="#"><?php echo "$ganre1"?></a>
-                <a href="#"><?php echo "$ganre2"?></a>
+                <a href="#"><?php echo "Macera"?></a>
+                <a href="#"><?php echo "Aksiyon"?></a>
               </div>
               <div class="date-time">
                 <div>
@@ -65,7 +65,7 @@
               </div>
             </div>
             <p class="storyline">
-            <?php echo "$story"?>
+            <?php echo "Dört genç büyülü bir video oyununun içine çekilir ve kaçabilmelerinin tek yolu oyunu bitirmek için birlikte çalışmaktır."?>
             </p>
             <?php }
               ?>
@@ -93,21 +93,21 @@
               <button class="btn btn-primary">
                 <ion-icon name="add-circle-outline"></ion-icon>
                 <form method="post">
-                  <input class="btn btn-primary" type="submit" name="Add" value='Add'>
+                  <input class="btn btn-primary" type="submit" name="Add" value='Ekle'>
                 </form>
               </button>
               
               <button class="btn btn-primary">
                 <ion-icon name="remove-circle-outline"></ion-icon>
                 <form method="post">
-                  <input class="btn btn-primary" type="submit" name="Remove" value='Remove'>
+                  <input class="btn btn-primary" type="submit" name="Remove" value='Kaldır'>
                 </form>
               </button>
               
               <button class="btn btn-primary">
                 <ion-icon name="heart-dislike-outline"></ion-icon>
                 <form method="post">
-                  <input class="btn btn-primary" type="submit" name="Dislike" value='Dislike'>
+                  <input class="btn btn-primary" type="submit" name="Dislike" value='Önerme'>
                 </form>
               </button>
 
