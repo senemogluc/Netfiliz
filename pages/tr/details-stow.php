@@ -39,7 +39,7 @@
           </figure>
           <div class="movie-detail-content">
             <h1 class="h1 detail-title">
-              <?php echo "$name" ?>
+              <?php echo "Kaçak Yolcu" ?>
             </h1>
             <div class="meta-wrapper">
               <div class="badge-wrapper">
@@ -48,8 +48,8 @@
                 <div class="badge badge-outline">HD</div>
               </div>
               <div class="ganre-wrapper">
-                <a href="#"><?php echo "$ganre1"?></a>
-                <a href="#"><?php echo "$ganre2"?></a>
+                <a href="#"><?php echo "Macera"?></a>
+                <a href="#"><?php echo "Bilim Kurgu"?></a>
               </div>
               <div class="date-time">
                 <div>
@@ -65,7 +65,7 @@
               </div>
             </div>
             <p class="storyline">
-            <?php echo "$story"?>
+            <?php echo "Mars’a giden bir grup insanın yaşadıklarını konu ediyor. Mars’a giden uzay gemisi Dünya’dan yeterince uzaklaştığında gemide kaçak bir yolcu olduğu keşfedilir. Ekibin gittikçe azalmakta olan kaynakları düşünerek bu kişi ile ilgili bir karar vermesi gerekir. Mürettebattakiler oybirliği ile bir karar verseler de uzay gemisindeki tıbbi araştırmacı onların kararına karşı çıkar ve bu durum beklenmeyen olayları beraberinde getirir."?>
             </p>
             <?php }
               ?>

@@ -48,8 +48,8 @@
                 <div class="badge badge-outline">HD</div>
               </div>
               <div class="ganre-wrapper">
-                <a href="#"><?php echo "$ganre1"?></a>
-                <a href="#"><?php echo "$ganre2"?></a>
+                <a href="#"><?php echo "Korku"?></a>
+                <a href="#"><?php echo "Bilim Kurgu"?></a>
               </div>
               <div class="date-time">
                 <div>
@@ -65,7 +65,7 @@
               </div>
             </div>
             <p class="storyline">
-            <?php echo "$story"?>
+            <?php echo "80'li yılları kendine fon yapan Stranger Things, dönemin korku filmlerine selam çakmayı atlamayan bir fantastik gerilim dizisi. Winona Ryder, David Harbour, Cara Buono'yu başrollerinde buluşturan dizi; kaybolan genç bir çocuğu ve onu bulmaya çalışan annesini anlatıyor."?>
             </p>
             <?php }
               ?>
