@@ -39,7 +39,7 @@
           </figure>
           <div class="movie-detail-content">
             <h1 class="h1 detail-title">
-              <?php echo "$name" ?>
+              <?php echo "Oyuncak Hikayesi 4" ?>
             </h1>
             <div class="meta-wrapper">
               <div class="badge-wrapper">
@@ -49,8 +49,8 @@
                 <div class="badge badge-outline">HD</div>
               </div>
               <div class="ganre-wrapper">
-                <a href="#"><?php echo "$ganre1"?></a>
-                <a href="#"><?php echo "$ganre2"?></a>
+                <a href="#"><?php echo "Komedi"?></a>
+                <a href="#"><?php echo "Macera"?></a>
               </div>
               <div class="date-time">
                 <div>
@@ -66,7 +66,7 @@
               </div>
             </div>
             <p class="storyline">
-            <?php echo "$story"?>
+            <?php echo ""Forky" adlı yeni bir oyuncak Woody ve çeteye katıldığında, eski ve yeni arkadaşlarla birlikte yapılan bir yolculuk, dünyanın bir oyuncak için ne kadar büyük olabileceğini ortaya çıkarır."?>
             </p>
             <?php }
               ?>
@@ -94,21 +94,21 @@
               <button class="btn btn-primary">
                 <ion-icon name="add-circle-outline"></ion-icon>
                 <form method="post">
-                  <input class="btn btn-primary" type="submit" name="Add" value='Add'>
+                  <input class="btn btn-primary" type="submit" name="Add" value='Ekle'>
                 </form>
               </button>
               
               <button class="btn btn-primary">
                 <ion-icon name="remove-circle-outline"></ion-icon>
                 <form method="post">
-                  <input class="btn btn-primary" type="submit" name="Remove" value='Remove'>
+                  <input class="btn btn-primary" type="submit" name="Remove" value='Sil'>
                 </form>
               </button>
               
               <button class="btn btn-primary">
                 <ion-icon name="heart-dislike-outline"></ion-icon>
                 <form method="post">
-                <input class="btn btn-primary" type="submit" name="Dislike" value='Do not Recommend'>
+                <input class="btn btn-primary" type="submit" name="Dislike" value='Önerme'>
                 </form>
               </button>
 
